@@ -1,0 +1,124 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainRelativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.evan2048.evanfollow.MainActivity" >
+
+    <dji.sdk.widget.DjiGLSurfaceView
+        android:id="@+id/mDjiSurfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/targetHDOPTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/targetHDOP"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/targetDistanceTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_toEndOf="@id/targetHDOPTextView"
+        android:layout_toRightOf="@id/targetHDOPTextView"
+        android:text="@string/targetDistance"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/startFollowButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:text="@string/startFollow" />
+
+    <Button
+        android:id="@+id/myFollowButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/startFollowButton"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:text="@string/myFollow" />
+
+    <Button
+        android:id="@+id/initFollowButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@id/startFollowButton"
+        android:layout_toStartOf="@id/startFollowButton"
+        android:text="@string/initFollow" />
+
+    <Button
+        android:id="@+id/openGSButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@id/initFollowButton"
+        android:layout_toStartOf="@id/initFollowButton"
+        android:text="@string/openGS" />
+
+    <Button
+        android:id="@+id/bluetoothButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@id/openGSButton"
+        android:layout_toStartOf="@id/openGSButton"
+        android:text="@string/bluetooth" />
+
+    <Button
+        android:id="@+id/testButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@id/bluetoothButton"
+        android:layout_toStartOf="@id/bluetoothButton"
+        android:text="@string/test" />
+
+    <RelativeLayout
+        android:id="@+id/leftBottomRelativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="2dp"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:id="@+id/leftBottomInnerRelativeLayout"
+            android:layout_width="200dp"
+            android:layout_height="150dp" >
+
+            <Button
+                android:id="@+id/resizeMapButton"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/resize_google_map" />
+
+            <fragment
+                android:id="@+id/mapFragment"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

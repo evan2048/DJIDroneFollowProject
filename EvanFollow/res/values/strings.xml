@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Application -->
+    <string name="app_name">EvanFollow</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <!-- UI -->
+    <string name="djiSdkActivateError">DJI SDK activate error</string>
+    <string name="pressAgainExitString">Press again to exit</string>
+    <string name="test">Test</string>
+    <string name="bluetooth">Bluetooth</string>
+    <string name="openGS">OpenGS</string>
+    <string name="startFollow">startFollow</string>
+    <string name="myFollow">myFollow</string>
+    <string name="initFollow">initFollow</string>
+    <string name="targetHDOP">targetHDOP</string>
+    <string name="targetDistance">targetDistance</string>
+    <!-- Bluetooth -->
+    <string name="scanForDevices">Scan for devices</string>
+
+</resources>
