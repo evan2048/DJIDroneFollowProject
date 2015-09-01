@@ -41,15 +41,15 @@ public class FollowAlgorithm {
     	{
     		//less than threshold,just update droneYaw and droneGimbalPitch
     		droneYaw=drone2TargetBearing;
-    		droneGimbalPitch=(Math.atan2(droneAltitude, drone2TargetDistance)/Math.PI*180);
+    		droneGimbalPitch=-(Math.atan2(droneAltitude, drone2TargetDistance)/Math.PI*180);  //negative
     		dronePitch=0;
     	}
     	else
     	{
     		//update droneYaw and droneGimbalPitch
     		droneYaw=drone2TargetBearing;
-    		droneGimbalPitch=(Math.atan2(droneAltitude, drone2TargetDistance)/Math.PI*180);
-    		dronePitch=1;
+    		droneGimbalPitch=-(Math.atan2(droneAltitude, drone2TargetDistance)/Math.PI*180);  //negative
+    		dronePitch=-1;
     	}
 	}
 	

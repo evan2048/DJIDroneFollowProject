@@ -7,6 +7,7 @@ import android.app.Activity;
 import android.bluetooth.BluetoothAdapter;
 import android.content.Intent;
 import android.hardware.usb.UsbManager;
+import android.location.Location;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.util.DisplayMetrics;
@@ -54,6 +55,13 @@ import com.evan2048.util.GNGGAParser;
 import com.evan2048.util.LocationTools;
 import com.evan2048.bluetooth.BluetoothState;
 import com.evan2048.bluetooth.BluetoothDeviceList;
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.api.GoogleApiClient;
+import com.google.android.gms.common.api.GoogleApiClient.ConnectionCallbacks;
+import com.google.android.gms.common.api.GoogleApiClient.OnConnectionFailedListener;
+import com.google.android.gms.location.LocationListener;
+import com.google.android.gms.location.LocationRequest;
+import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.SupportMapFragment;
@@ -63,7 +71,7 @@ import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import net.sf.marineapi.nmea.parser.*;
 
-public class MainActivity extends FragmentActivity implements OnClickListener,OnTouchListener {
+public class MainActivity extends FragmentActivity implements OnClickListener,OnTouchListener, ConnectionCallbacks, OnConnectionFailedListener, LocationListener {
 	
 	//Environment
 	private static final String TAG = "MainActivity";  //debug TAG
@@ -79,6 +87,8 @@ public class MainActivity extends FragmentActivity implements OnClickListener,On
 	//Google Map
 	private GoogleMap mGoogleMap; // Might be null if Google Play services APK is not available.
 	private final double GOOGLE_MAP_FRAGMENT_SIZE_SCALE = 0.4;  //google map fragment scale to device screen size
+	private GoogleApiClient mGoogleApiClient;
+	private LocationRequest mLocationRequest;
 	//Bluetooth
 	private BluetoothSPP mBluetoothSPP;  //https://github.com/akexorcist/Android-BluetoothSPPLibrary
 	//target
@@ -92,6 +102,8 @@ public class MainActivity extends FragmentActivity implements OnClickListener,On
 	//Other
 	private int deviceScreenWidth = 0;  //device screen size
 	private int deviceScreenHeight = 0;
+	private Location deviceLastLocation;
+	private Location deviceCurrentLocation;
 	DecimalFormat mDecimalFormat=new DecimalFormat("#.0");  //format double value to #.0
 	
 	//print log message
@@ -528,6 +540,29 @@ public class MainActivity extends FragmentActivity implements OnClickListener,On
 		}
 	}
 	
+	private Marker deviceMarker;  //device marker draw on google map
+	private MarkerOptions deviceMarkerOptions=new MarkerOptions();
+	//draw device in google map
+	private void drawDeviceInGoogleMap(final LatLng latLng)
+	{
+		runOnUiThread(new Runnable()
+		{
+			public void run()
+			{
+				if(deviceMarker==null)
+				{
+					deviceMarkerOptions.position(latLng).icon(BitmapDescriptorFactory.fromResource(R.drawable.google_map_blue_dot));
+					deviceMarker=mGoogleMap.addMarker(deviceMarkerOptions);
+					mGoogleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 18f));
+				}
+				else
+				{
+					deviceMarker.setPosition(latLng);
+				}
+			}
+		});
+	}
+	
 	//init Bluetooth
 	private void initBluetooth()
 	{
@@ -547,12 +582,29 @@ public class MainActivity extends FragmentActivity implements OnClickListener,On
 		{
 		    public void onDataReceived(byte[] data, String message)
 		    {
+		    	//TODO
+		    	GGAParser mGgaParser=new GGAParser(message);
+		    	try
+		    	{
+		    		targetLocationLatitude=mGgaParser.getPosition().getLatitude();
+		    		targetLocationLongitude=mGgaParser.getPosition().getLongitude();
+		    		targetSatelliteCount=mGgaParser.getSatelliteCount();
+		    		targetHDOP=mGgaParser.getHorizontalDOP();
+		    	}
+		    	catch(Exception e)
+		    	{
+		    		targetLocationLatitude=0.0;
+		    		targetLocationLongitude=0.0;
+		    		targetSatelliteCount=0;
+		    		targetHDOP=0.0;
+		    	}
+		    	
 		    	//showLog(message);
-		    	GNGGAParser mParser=new GNGGAParser(message);
-		    	targetLocationLatitude=mParser.getLatitude();
-		    	targetLocationLongitude=mParser.getLongitude();
-		    	targetSatelliteCount=mParser.getSatelliteCount();
-		    	targetHDOP=mParser.getHDOP();
+//		    	GNGGAParser mParser=new GNGGAParser(message);
+//		    	targetLocationLatitude=mParser.getLatitude();
+//		    	targetLocationLongitude=mParser.getLongitude();
+//		    	targetSatelliteCount=mParser.getSatelliteCount();
+//		    	targetHDOP=mParser.getHDOP();
 		    	//check zero
 		    	if(targetLocationLatitude==0.0 || targetLocationLongitude==0.0 || targetSatelliteCount==0 || targetHDOP==0.0)
 		    	{
@@ -671,7 +723,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener,On
 			FollowAlgorithm mAlgorithm=new FollowAlgorithm(droneLocationLatitude, droneLocationLongitude, droneAltitude, targetLocationLatitude, targetLocationLongitude, targetSatelliteCount, targetHDOP);
 			float droneYaw=mAlgorithm.getDroneYaw();
 			float dronePitch=mAlgorithm.getDronePitch();
-			final double droneGimbalPitch=-(mAlgorithm.getDroneGimbalPitch());  //negative
+			final double droneGimbalPitch=mAlgorithm.getDroneGimbalPitch();
 			float droneSpeed=mAlgorithm.getDroneSpeed();
 			//update dji gimbal
 			DJIGimbalRotation mGimbalPitch=new DJIGimbalRotation(true, true, true, (int)droneGimbalPitch);
@@ -702,6 +754,41 @@ public class MainActivity extends FragmentActivity implements OnClickListener,On
 		}
 	}
 	
+    //update device location
+	private Timer updateDeviceLocationTaskTimer = new Timer();
+	class updateDeviceLocationTask extends TimerTask
+	{
+		@Override
+		public void run()
+		{
+			deviceLastLocation=LocationServices.FusedLocationApi.getLastLocation(mGoogleApiClient);
+			if(deviceLastLocation != null)
+			{
+				showLog("device location:"+deviceLastLocation.getLatitude()+","+deviceLastLocation.getLongitude());
+				drawDeviceInGoogleMap(new LatLng(deviceLastLocation.getLatitude(), deviceLastLocation.getLongitude()));
+			}
+		}
+	}
+	
+	//build google api client
+	private synchronized void buildGoogleApiClient()
+	{
+	    mGoogleApiClient = new GoogleApiClient.Builder(this)
+	        .addConnectionCallbacks(this)
+	        .addOnConnectionFailedListener(this)
+	        .addApi(LocationServices.API)
+	        .build();
+	    mGoogleApiClient.connect();
+	}
+	
+	private void createLocationRequest()
+	{
+	    mLocationRequest = new LocationRequest();
+	    mLocationRequest.setInterval(1000);
+	    mLocationRequest.setFastestInterval(500);
+	    mLocationRequest.setPriority(LocationRequest.PRIORITY_HIGH_ACCURACY);
+	}
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState)
 	{
@@ -712,6 +799,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener,On
 		initUIControls();
 		initBluetooth();
 		initGoogleMap();
+		buildGoogleApiClient();
 		initDJISDK();
 		initDJICamera();
 		
@@ -805,6 +893,37 @@ public class MainActivity extends FragmentActivity implements OnClickListener,On
             return true;
         }
 		return super.onKeyDown(keyCode, event);
+	}
+
+	//GoogleApiClient onConnected
+	@Override
+	public void onConnected(Bundle connectionHint)
+	{
+		showLog("GoogleApiClient onConnected");
+		createLocationRequest();
+		//updateDeviceLocationTaskTimer.schedule(new updateDeviceLocationTask(), 1000, 100);
+		LocationServices.FusedLocationApi.requestLocationUpdates(
+	            mGoogleApiClient, mLocationRequest, this);
+	}
+
+	@Override
+	public void onConnectionSuspended(int value)
+	{
+		showLog("GoogleApiClient onConnectionSuspended");
+	}
+
+	@Override
+	public void onConnectionFailed(ConnectionResult result)
+	{
+		showLog("GoogleApiClient onConnectionFailed");
+	}
+
+	@Override
+	public void onLocationChanged(Location location)
+	{
+		showLog("device location:"+location.getLatitude()+","+location.getLongitude());
+		deviceCurrentLocation=location;
+		drawDeviceInGoogleMap(new LatLng(deviceCurrentLocation.getLatitude(), deviceCurrentLocation.getLongitude()));
 	}
 	
 }
