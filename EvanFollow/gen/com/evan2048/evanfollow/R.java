@@ -521,13 +521,13 @@ containing a value of this type.
         public static final int resize_google_map=0x7f02002e;
     }
     public static final class id {
-        public static final int action_settings=0x7f0a0033;
+        public static final int action_settings=0x7f0a0032;
         public static final int adjust_height=0x7f0a0005;
         public static final int adjust_width=0x7f0a0006;
-        public static final int bluetoothButton=0x7f0a0026;
+        public static final int bluetoothButton=0x7f0a0025;
         public static final int bold=0x7f0a0001;
         public static final int book_now=0x7f0a0016;
-        public static final int button_scan=0x7f0a002c;
+        public static final int button_scan=0x7f0a002b;
         public static final int buyButton=0x7f0a0012;
         public static final int buy_now=0x7f0a0017;
         public static final int buy_with_google=0x7f0a0018;
@@ -539,28 +539,26 @@ containing a value of this type.
         public static final int holo_dark=0x7f0a000c;
         public static final int holo_light=0x7f0a000d;
         public static final int hybrid=0x7f0a0008;
-        public static final int initFollowButton=0x7f0a0024;
-        public static final int leftBottomInnerRelativeLayout=0x7f0a0029;
-        public static final int leftBottomRelativeLayout=0x7f0a0028;
-        public static final int list_devices=0x7f0a002d;
-        public static final int log_dlg_content=0x7f0a0031;
-        public static final int log_dlg_control=0x7f0a002e;
-        public static final int log_dlg_lock=0x7f0a002f;
-        public static final int log_dlg_rg=0x7f0a0032;
-        public static final int log_dlg_scroll=0x7f0a0030;
-        public static final int mDjiSurfaceView=0x7f0a001f;
+        public static final int initFollowButton=0x7f0a0023;
+        public static final int leftBottomInnerRelativeLayout=0x7f0a0028;
+        public static final int leftBottomRelativeLayout=0x7f0a0027;
+        public static final int list_devices=0x7f0a002c;
+        public static final int log_dlg_content=0x7f0a0030;
+        public static final int log_dlg_control=0x7f0a002d;
+        public static final int log_dlg_lock=0x7f0a002e;
+        public static final int log_dlg_rg=0x7f0a0031;
+        public static final int log_dlg_scroll=0x7f0a002f;
         public static final int mainRelativeLayout=0x7f0a001e;
-        public static final int mapFragment=0x7f0a002b;
+        public static final int mapFragment=0x7f0a002a;
         public static final int match_parent=0x7f0a0014;
         public static final int monochrome=0x7f0a001c;
-        public static final int myFollowButton=0x7f0a0023;
         public static final int nbold=0x7f0a0003;
         public static final int nlight=0x7f0a0004;
         public static final int none=0x7f0a0007;
         public static final int normal=0x7f0a0009;
-        public static final int openGSButton=0x7f0a0025;
+        public static final int openGSButton=0x7f0a0024;
         public static final int production=0x7f0a000e;
-        public static final int resizeMapButton=0x7f0a002a;
+        public static final int resizeMapButton=0x7f0a0029;
         public static final int sandbox=0x7f0a000f;
         public static final int satellite=0x7f0a000a;
         public static final int selectionDetails=0x7f0a0013;
@@ -571,7 +569,8 @@ containing a value of this type.
         public static final int targetHDOPTextView=0x7f0a0020;
         public static final int terrain=0x7f0a000b;
         public static final int test=0x7f0a0011;
-        public static final int testButton=0x7f0a0027;
+        public static final int testButton=0x7f0a0026;
+        public static final int videoTextureView=0x7f0a001f;
         public static final int wrap_content=0x7f0a0015;
     }
     public static final class integer {
@@ -600,226 +599,226 @@ containing a value of this type.
         public static final int iframe_960_3s=0x7f06000a;
     }
     public static final class string {
-        public static final int DESCRIPTION_RESULT_OK=0x7f08000d;
-        public static final int DetailCheckPermissionSuccess=0x7f080029;
-        public static final int ERR_COULD_NOT_DELETE_ALL_FILE=0x7f080028;
-        public static final int ERR_DECRIPTION_CAM_EXEC_TIMEOUT=0x7f08000f;
-        public static final int ERR_DECRIPTION_CAM_INVALID_PARAM=0x7f080011;
-        public static final int ERR_DECRIPTION_CAM_MEMALLOC_FAILED=0x7f080010;
-        public static final int ERR_DECRIPTION_CAM_NO_SDCARD=0x7f080016;
-        public static final int ERR_DECRIPTION_CAM_PARAM_GET_FAILED=0x7f080015;
-        public static final int ERR_DECRIPTION_CAM_PARAM_NOT_AVAILABLE=0x7f08001d;
-        public static final int ERR_DECRIPTION_CAM_PARAM_SET_FAILED=0x7f080014;
-        public static final int ERR_DECRIPTION_CAM_SDCARD_ERROR=0x7f080018;
-        public static final int ERR_DECRIPTION_CAM_SDCARD_FULL=0x7f080017;
-        public static final int ERR_DECRIPTION_CAM_SENSOR_ERROR=0x7f080019;
-        public static final int ERR_DECRIPTION_CAM_SYSTEM_ERROR=0x7f08001a;
-        public static final int ERR_DECRIPTION_CAM_TIME_NO_SYNC=0x7f080013;
-        public static final int ERR_DECRIPTION_CAM_UNSUPPORT_CMD=0x7f08000e;
-        public static final int ERR_DECRIPTION_CAM_UNSUPPORT_CMD_STATE=0x7f080012;
-        public static final int ERR_DECRIPTION_CMD_RECV_PACK_NULL=0x7f08000b;
-        public static final int ERR_DECRIPTION_FIRM_MATCH_WRONG=0x7f080024;
-        public static final int ERR_DECRIPTION_FLASH_C_WRONG=0x7f080021;
-        public static final int ERR_DECRIPTION_FLASH_FLUSHING=0x7f080025;
-        public static final int ERR_DECRIPTION_FLASH_W_WRONG=0x7f080022;
-        public static final int ERR_DECRIPTION_FM_CRC_WRONG=0x7f080020;
-        public static final int ERR_DECRIPTION_FM_LENGTH_WRONG=0x7f08001f;
-        public static final int ERR_DECRIPTION_FM_NONSEQUENCE=0x7f08001e;
-        public static final int ERR_DECRIPTION_PARAM_IILEGAL=0x7f08000c;
-        public static final int ERR_DECRIPTION_RESULT_MATCH_FAILED=0x7f08001c;
-        public static final int ERR_DECRIPTION_RESULT_SUCCEED=0x7f08001b;
-        public static final int ERR_DECRIPTION_TIMEOUT=0x7f080027;
-        public static final int ERR_DECRIPTION_UNDEFINED=0x7f080026;
-        public static final int ERR_DECRIPTION_UPDATE_WRONG=0x7f080023;
-        public static final int ERR_DESCRIPTION_CAM_NOT_USB_STATE=0x7f080006;
-        public static final int ERR_DESCRIPTION_CONNECTTION_NOT_OK=0x7f080009;
-        public static final int ERR_DESCRIPTION_GET_REMOTE_MEDIA_FAILED=0x7f080004;
-        public static final int ERR_DESCRIPTION_GET_REMOTE_MEDIA_HTTP_ERROR=0x7f080003;
-        public static final int ERR_DESCRIPTION_GET_REMOTE_NO_MEDIA=0x7f080002;
+        public static final int DESCRIPTION_RESULT_OK=0x7f08000e;
+        public static final int DetailCheckPermissionSuccess=0x7f08002a;
+        public static final int ERR_COULD_NOT_DELETE_ALL_FILE=0x7f080029;
+        public static final int ERR_DECRIPTION_CAM_EXEC_TIMEOUT=0x7f080010;
+        public static final int ERR_DECRIPTION_CAM_INVALID_PARAM=0x7f080012;
+        public static final int ERR_DECRIPTION_CAM_MEMALLOC_FAILED=0x7f080011;
+        public static final int ERR_DECRIPTION_CAM_NO_SDCARD=0x7f080017;
+        public static final int ERR_DECRIPTION_CAM_PARAM_GET_FAILED=0x7f080016;
+        public static final int ERR_DECRIPTION_CAM_PARAM_NOT_AVAILABLE=0x7f08001e;
+        public static final int ERR_DECRIPTION_CAM_PARAM_SET_FAILED=0x7f080015;
+        public static final int ERR_DECRIPTION_CAM_SDCARD_ERROR=0x7f080019;
+        public static final int ERR_DECRIPTION_CAM_SDCARD_FULL=0x7f080018;
+        public static final int ERR_DECRIPTION_CAM_SENSOR_ERROR=0x7f08001a;
+        public static final int ERR_DECRIPTION_CAM_SYSTEM_ERROR=0x7f08001b;
+        public static final int ERR_DECRIPTION_CAM_TIME_NO_SYNC=0x7f080014;
+        public static final int ERR_DECRIPTION_CAM_UNSUPPORT_CMD=0x7f08000f;
+        public static final int ERR_DECRIPTION_CAM_UNSUPPORT_CMD_STATE=0x7f080013;
+        public static final int ERR_DECRIPTION_CMD_RECV_PACK_NULL=0x7f08000c;
+        public static final int ERR_DECRIPTION_FIRM_MATCH_WRONG=0x7f080025;
+        public static final int ERR_DECRIPTION_FLASH_C_WRONG=0x7f080022;
+        public static final int ERR_DECRIPTION_FLASH_FLUSHING=0x7f080026;
+        public static final int ERR_DECRIPTION_FLASH_W_WRONG=0x7f080023;
+        public static final int ERR_DECRIPTION_FM_CRC_WRONG=0x7f080021;
+        public static final int ERR_DECRIPTION_FM_LENGTH_WRONG=0x7f080020;
+        public static final int ERR_DECRIPTION_FM_NONSEQUENCE=0x7f08001f;
+        public static final int ERR_DECRIPTION_PARAM_IILEGAL=0x7f08000d;
+        public static final int ERR_DECRIPTION_RESULT_MATCH_FAILED=0x7f08001d;
+        public static final int ERR_DECRIPTION_RESULT_SUCCEED=0x7f08001c;
+        public static final int ERR_DECRIPTION_TIMEOUT=0x7f080028;
+        public static final int ERR_DECRIPTION_UNDEFINED=0x7f080027;
+        public static final int ERR_DECRIPTION_UPDATE_WRONG=0x7f080024;
+        public static final int ERR_DESCRIPTION_CAM_NOT_USB_STATE=0x7f080007;
+        public static final int ERR_DESCRIPTION_CANNOT_SET_PARAM_IN_THIS_STATE=0x7f080002;
+        public static final int ERR_DESCRIPTION_CONNECTTION_NOT_OK=0x7f08000a;
+        public static final int ERR_DESCRIPTION_GET_REMOTE_MEDIA_FAILED=0x7f080005;
+        public static final int ERR_DESCRIPTION_GET_REMOTE_MEDIA_HTTP_ERROR=0x7f080004;
+        public static final int ERR_DESCRIPTION_GET_REMOTE_NO_MEDIA=0x7f080003;
         public static final int ERR_DESCRIPTION_GET_SMART_BATTERY_INFO_FAILED=0x7f080001;
-        public static final int ERR_DESCRIPTION_GET_THUMBNAIL_FAILED=0x7f080005;
-        public static final int ERR_DESCRIPTION_PLUS_GIMBAL_MOTOR=0x7f080007;
-        public static final int ERR_DESCRIPTION_PLUS_REMOVE_LOCK=0x7f080008;
+        public static final int ERR_DESCRIPTION_GET_THUMBNAIL_FAILED=0x7f080006;
+        public static final int ERR_DESCRIPTION_PLUS_GIMBAL_MOTOR=0x7f080008;
+        public static final int ERR_DESCRIPTION_PLUS_REMOVE_LOCK=0x7f080009;
         public static final int ERR_DESCRIPTION_RESULT_FAILED=0x7f080000;
-        public static final int ERR_DESCRIPTION_UNSUPPORT=0x7f08000a;
-        public static final int ErrorDetailCheckPermissionActivationExceed=0x7f080031;
-        public static final int ErrorDetailCheckPermissionAesEncryptFailed=0x7f08003a;
-        public static final int ErrorDetailCheckPermissionAppKeyNoPermission=0x7f080034;
-        public static final int ErrorDetailCheckPermissionAppKeyNotExist=0x7f080033;
-        public static final int ErrorDetailCheckPermissionAppKeyPlatfromError=0x7f080032;
-        public static final int ErrorDetailCheckPermissionAppKeyProhibited=0x7f080030;
-        public static final int ErrorDetailCheckPermissionConnectInternet=0x7f08002a;
-        public static final int ErrorDetailCheckPermissionDeviceNotMatch=0x7f08002e;
-        public static final int ErrorDetailCheckPermissionEmptyAppKey=0x7f08002b;
-        public static final int ErrorDetailCheckPermissionGetServerDataTimeout=0x7f08002d;
-        public static final int ErrorDetailCheckPermissionGetSupport=0x7f08003e;
-        public static final int ErrorDetailCheckPermissionInvalidAppKey=0x7f08002c;
-        public static final int ErrorDetailCheckPermissionInvalidMetaData=0x7f080038;
-        public static final int ErrorDetailCheckPermissionInvalidUUID=0x7f08003b;
-        public static final int ErrorDetailCheckPermissionLevelisLow=0x7f08003d;
-        public static final int ErrorDetailCheckPermissionPackageNameNotMatch=0x7f08002f;
-        public static final int ErrorDetailCheckPermissionServerDataAbnormal=0x7f080037;
-        public static final int ErrorDetailCheckPermissionServerParseFailure=0x7f080035;
-        public static final int ErrorDetailCheckPermissionServerUnknown=0x7f08003c;
-        public static final int ErrorDetailCheckPermissionServerWriteError=0x7f080036;
-        public static final int ErrorDetailCheckPermissionUnsportAesEncrypt=0x7f080039;
-        public static final int accept=0x7f080041;
-        public static final int action_settings=0x7f08006d;
+        public static final int ERR_DESCRIPTION_UNSUPPORT=0x7f08000b;
+        public static final int ErrorDetailCheckPermissionActivationExceed=0x7f080032;
+        public static final int ErrorDetailCheckPermissionAesEncryptFailed=0x7f08003b;
+        public static final int ErrorDetailCheckPermissionAppKeyNoPermission=0x7f080035;
+        public static final int ErrorDetailCheckPermissionAppKeyNotExist=0x7f080034;
+        public static final int ErrorDetailCheckPermissionAppKeyPlatfromError=0x7f080033;
+        public static final int ErrorDetailCheckPermissionAppKeyProhibited=0x7f080031;
+        public static final int ErrorDetailCheckPermissionConnectInternet=0x7f08002b;
+        public static final int ErrorDetailCheckPermissionDeviceNotMatch=0x7f08002f;
+        public static final int ErrorDetailCheckPermissionEmptyAppKey=0x7f08002c;
+        public static final int ErrorDetailCheckPermissionGetServerDataTimeout=0x7f08002e;
+        public static final int ErrorDetailCheckPermissionGetSupport=0x7f08003f;
+        public static final int ErrorDetailCheckPermissionInvalidAppKey=0x7f08002d;
+        public static final int ErrorDetailCheckPermissionInvalidMetaData=0x7f080039;
+        public static final int ErrorDetailCheckPermissionInvalidUUID=0x7f08003c;
+        public static final int ErrorDetailCheckPermissionLevelisLow=0x7f08003e;
+        public static final int ErrorDetailCheckPermissionPackageNameNotMatch=0x7f080030;
+        public static final int ErrorDetailCheckPermissionServerDataAbnormal=0x7f080038;
+        public static final int ErrorDetailCheckPermissionServerParseFailure=0x7f080036;
+        public static final int ErrorDetailCheckPermissionServerUnknown=0x7f08003d;
+        public static final int ErrorDetailCheckPermissionServerWriteError=0x7f080037;
+        public static final int ErrorDetailCheckPermissionUnsportAesEncrypt=0x7f08003a;
+        public static final int accept=0x7f080042;
+        public static final int action_settings=0x7f08006e;
         /**  Application 
          */
-        public static final int app_name=0x7f08006b;
+        public static final int app_name=0x7f08006c;
         /**  Brand name for Facebook [DO NOT TRANSLATE] 
          */
-        public static final int auth_google_play_services_client_facebook_display_name=0x7f080046;
+        public static final int auth_google_play_services_client_facebook_display_name=0x7f080047;
         /**  Brand name for Google [DO NOT TRANSLATE] 
          */
-        public static final int auth_google_play_services_client_google_display_name=0x7f080045;
-        public static final int bluetooth=0x7f080071;
+        public static final int auth_google_play_services_client_google_display_name=0x7f080046;
+        public static final int bluetooth=0x7f080072;
         /**  Message of the notification to indicate an active cast display connection.  [CHAR LIMIT=80] NOTE: Same text as msgid="794424023757290105" 
          */
-        public static final int cast_notification_connected_message=0x7f080048;
+        public static final int cast_notification_connected_message=0x7f080049;
         /**  Message of the notification to indicate the process of connecting to a cast display.  [CHAR LIMIT=80] NOTE: Same text as msgid="5435169294190995247" 
          */
-        public static final int cast_notification_connecting_message=0x7f080047;
+        public static final int cast_notification_connecting_message=0x7f080048;
         /**  Label of a button to disconnect an active cast display connection.  [CHAR LIMIT=25] NOTE: Same text as msgid="9024230238785261495" 
          */
-        public static final int cast_notification_disconnect=0x7f080049;
+        public static final int cast_notification_disconnect=0x7f08004a;
         /**   Text for notification shown when the Android Wear apps needs to be updated. Only shown on the wearable. [CHAR LIMIT=NONE] 
          */
-        public static final int common_android_wear_notification_needs_update_text=0x7f08004c;
+        public static final int common_android_wear_notification_needs_update_text=0x7f08004d;
         /**  Message in confirmation dialog informing user that they need to update
         the Android Wear app [CHAR LIMIT=NONE] 
          */
-        public static final int common_android_wear_update_text=0x7f080059;
+        public static final int common_android_wear_update_text=0x7f08005a;
         /**  Title of confirmation dialog informing user that they need to update
         the Android Wear app (from Play Store) [CHAR LIMIT=40] 
          */
-        public static final int common_android_wear_update_title=0x7f080057;
+        public static final int common_android_wear_update_title=0x7f080058;
         /**  Message in confirmation dialog informing the user that one of the APIs they attepmt to access is not available. [CHAR LIMIT=NONE] 
          */
-        public static final int common_google_play_services_api_unavailable_text=0x7f080067;
+        public static final int common_google_play_services_api_unavailable_text=0x7f080068;
         /**  Button in confirmation dialog to enable Google Play services.  Clicking it
         will direct user to application settings of Google Play services where they
         can enable it [CHAR LIMIT=40] 
          */
-        public static final int common_google_play_services_enable_button=0x7f080055;
+        public static final int common_google_play_services_enable_button=0x7f080056;
         /**  Message in confirmation dialog informing user they need to enable
         Google Play services in application settings [CHAR LIMIT=NONE] 
          */
-        public static final int common_google_play_services_enable_text=0x7f080054;
+        public static final int common_google_play_services_enable_text=0x7f080055;
         /**  Title of confirmation dialog informing user they need to enable
         Google Play services in application settings [CHAR LIMIT=40] 
          */
-        public static final int common_google_play_services_enable_title=0x7f080053;
+        public static final int common_google_play_services_enable_title=0x7f080054;
         /**   Requested by string saying which app requested the notification. [CHAR LIMIT=42] 
          */
-        public static final int common_google_play_services_error_notification_requested_by_msg=0x7f08004e;
+        public static final int common_google_play_services_error_notification_requested_by_msg=0x7f08004f;
         /**  Button in confirmation dialog for installing Google Play services [CHAR LIMIT=40] 
          */
-        public static final int common_google_play_services_install_button=0x7f080052;
+        public static final int common_google_play_services_install_button=0x7f080053;
         /**  (For phones) Message in confirmation dialog informing user that
         they need to install Google Play services (from Play Store) [CHAR LIMIT=NONE] 
          */
-        public static final int common_google_play_services_install_text_phone=0x7f080050;
+        public static final int common_google_play_services_install_text_phone=0x7f080051;
         /**  (For tablets) Message in confirmation dialog informing user that
         they need to install Google Play services (from Play Store) [CHAR LIMIT=NONE] 
          */
-        public static final int common_google_play_services_install_text_tablet=0x7f080051;
+        public static final int common_google_play_services_install_text_tablet=0x7f080052;
         /**  Title of confirmation dialog informing user that they need to install
         Google Play services (from Play Store) [CHAR LIMIT=40] 
          */
-        public static final int common_google_play_services_install_title=0x7f08004f;
+        public static final int common_google_play_services_install_title=0x7f080050;
         /**  Message in confirmation dialog informing the user that they provided an invalid account. [CHAR LIMIT=NONE] 
          */
-        public static final int common_google_play_services_invalid_account_text=0x7f08005f;
+        public static final int common_google_play_services_invalid_account_text=0x7f080060;
         /**  Title of confirmation dialog informing the user that they provided an invalid account. [CHAR LIMIT=40] 
          */
-        public static final int common_google_play_services_invalid_account_title=0x7f08005e;
+        public static final int common_google_play_services_invalid_account_title=0x7f08005f;
         /**   Title for notification shown when GooglePlayServices needs to be enabled for an
         application to work. [CHAR LIMIT=70] 
          */
-        public static final int common_google_play_services_needs_enabling_title=0x7f08004d;
+        public static final int common_google_play_services_needs_enabling_title=0x7f08004e;
         /**  Message in confirmation dialog informing the user that a network error occurred. [CHAR LIMIT=NONE] 
          */
-        public static final int common_google_play_services_network_error_text=0x7f08005d;
+        public static final int common_google_play_services_network_error_text=0x7f08005e;
         /**  Title of confirmation dialog informing the user that a network error occurred. [CHAR LIMIT=40] 
          */
-        public static final int common_google_play_services_network_error_title=0x7f08005c;
+        public static final int common_google_play_services_network_error_title=0x7f08005d;
         /**   Title for notification shown when GooglePlayServices needs to be updated for an
         application to work. [CHAR LIMIT=70] 
          */
-        public static final int common_google_play_services_notification_needs_update_title=0x7f08004b;
+        public static final int common_google_play_services_notification_needs_update_title=0x7f08004c;
         /**   Title for notification shown when GooglePlayServices is unavailable [CHAR LIMIT=42] 
          */
-        public static final int common_google_play_services_notification_ticker=0x7f08004a;
+        public static final int common_google_play_services_notification_ticker=0x7f08004b;
         /**  Message in confirmation dialog informing the user that the account could not be signed in. [CHAR LIMIT=NONE] 
          */
-        public static final int common_google_play_services_sign_in_failed_text=0x7f080069;
+        public static final int common_google_play_services_sign_in_failed_text=0x7f08006a;
         /**  Title of confirmation dialog informing the user that the account could not be signed in. [CHAR LIMIT=40] 
          */
-        public static final int common_google_play_services_sign_in_failed_title=0x7f080068;
+        public static final int common_google_play_services_sign_in_failed_title=0x7f080069;
         /**  Message in confirmation dialog informing user there is an unknown issue in Google Play
         services [CHAR LIMIT=NONE] 
          */
-        public static final int common_google_play_services_unknown_issue=0x7f080060;
+        public static final int common_google_play_services_unknown_issue=0x7f080061;
         /**  Message in confirmation dialog informing user that Google Play services is not supported on their device [CHAR LIMIT=NONE] 
          */
-        public static final int common_google_play_services_unsupported_text=0x7f080062;
+        public static final int common_google_play_services_unsupported_text=0x7f080063;
         /**  Title of confirmation dialog informing user that Google Play services is not supported on their device [CHAR LIMIT=40] 
          */
-        public static final int common_google_play_services_unsupported_title=0x7f080061;
+        public static final int common_google_play_services_unsupported_title=0x7f080062;
         /**  Button in confirmation dialog for updating Google Play services [CHAR LIMIT=40] 
          */
-        public static final int common_google_play_services_update_button=0x7f080063;
+        public static final int common_google_play_services_update_button=0x7f080064;
         /**  Message in confirmation dialog informing user that they need to update
         Google Play services (from Play Store) [CHAR LIMIT=NONE] 
          */
-        public static final int common_google_play_services_update_text=0x7f080058;
+        public static final int common_google_play_services_update_text=0x7f080059;
         /**  Title of confirmation dialog informing user that they need to update
         Google Play services (from Play Store) [CHAR LIMIT=40] 
          */
-        public static final int common_google_play_services_update_title=0x7f080056;
+        public static final int common_google_play_services_update_title=0x7f080057;
         /**  Message in confirmation dialog informing user that Google Play services is currently
         updating [CHAR LIMIT=NONE] 
          */
-        public static final int common_google_play_services_updating_text=0x7f08005b;
+        public static final int common_google_play_services_updating_text=0x7f08005c;
         /**  Title of confirmation dialog informing user that Google Play services is currently
         updating [CHAR LIMIT=40] 
          */
-        public static final int common_google_play_services_updating_title=0x7f08005a;
+        public static final int common_google_play_services_updating_title=0x7f08005b;
         /**  Label for an action to open a notifications content on the phone [CHAR LIMIT=25] 
          */
-        public static final int common_open_on_phone=0x7f080066;
+        public static final int common_open_on_phone=0x7f080067;
         /**  Sign-in button text [CHAR LIMIT=15] 
          */
-        public static final int common_signin_button_text=0x7f080064;
+        public static final int common_signin_button_text=0x7f080065;
         /**  Long form sign-in button text [CHAR LIMIT=30] 
          */
-        public static final int common_signin_button_text_long=0x7f080065;
-        public static final int create_calendar_message=0x7f080044;
-        public static final int create_calendar_title=0x7f080043;
-        public static final int decline=0x7f080042;
+        public static final int common_signin_button_text_long=0x7f080066;
+        public static final int create_calendar_message=0x7f080045;
+        public static final int create_calendar_title=0x7f080044;
+        public static final int decline=0x7f080043;
         /**  UI 
          */
-        public static final int djiSdkActivateError=0x7f08006e;
-        public static final int hello_world=0x7f08006c;
+        public static final int djiSdkActivateError=0x7f08006f;
+        public static final int hello_world=0x7f08006d;
         public static final int initFollow=0x7f080075;
-        public static final int myFollow=0x7f080074;
-        public static final int openGS=0x7f080072;
-        public static final int pressAgainExitString=0x7f08006f;
+        public static final int openGS=0x7f080073;
+        public static final int pressAgainExitString=0x7f080070;
         /**  Bluetooth 
          */
         public static final int scanForDevices=0x7f080078;
-        public static final int startFollow=0x7f080073;
-        public static final int store_picture_message=0x7f080040;
-        public static final int store_picture_title=0x7f08003f;
+        public static final int startFollow=0x7f080074;
+        public static final int store_picture_message=0x7f080041;
+        public static final int store_picture_title=0x7f080040;
         public static final int targetDistance=0x7f080077;
         public static final int targetHDOP=0x7f080076;
-        public static final int test=0x7f080070;
+        public static final int test=0x7f080071;
         /**  Text on a placeholder buy button when Google Play services is not
          available or up-to-date 
          */
-        public static final int wallet_buy_button_place_holder=0x7f08006a;
+        public static final int wallet_buy_button_place_holder=0x7f08006b;
     }
     public static final class style {
         /** 

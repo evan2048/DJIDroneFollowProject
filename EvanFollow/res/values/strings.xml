@@ -12,7 +12,6 @@
     <string name="bluetooth">Bluetooth</string>
     <string name="openGS">OpenGS</string>
     <string name="startFollow">startFollow</string>
-    <string name="myFollow">myFollow</string>
     <string name="initFollow">initFollow</string>
     <string name="targetHDOP">targetHDOP</string>
     <string name="targetDistance">targetDistance</string>

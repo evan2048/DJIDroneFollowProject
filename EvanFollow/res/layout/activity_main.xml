@@ -5,10 +5,12 @@
     android:layout_height="match_parent"
     tools:context="com.evan2048.evanfollow.MainActivity" >
 
-    <dji.sdk.widget.DjiGLSurfaceView
-        android:id="@+id/mDjiSurfaceView"
+    <TextureView
+        android:id="@+id/videoTextureView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center" />
 
     <TextView
         android:id="@+id/targetHDOPTextView"
@@ -40,15 +42,6 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:text="@string/startFollow" />
-
-    <Button
-        android:id="@+id/myFollowButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/startFollowButton"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:text="@string/myFollow" />
 
     <Button
         android:id="@+id/initFollowButton"
